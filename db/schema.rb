@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170130203228) do
+ActiveRecord::Schema.define(version: 20170130204824) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,8 +23,9 @@ ActiveRecord::Schema.define(version: 20170130203228) do
 
   create_table "players", force: :cascade do |t|
     t.integer  "goals"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+    t.integer  "assists",    default: 0
   end
 
   create_table "teams", force: :cascade do |t|
@@ -37,6 +38,16 @@ ActiveRecord::Schema.define(version: 20170130203228) do
     t.datetime "updated_at",             null: false
     t.index ["league_id"], name: "index_teams_on_league_id", using: :btree
     t.index ["user_id"], name: "index_teams_on_user_id", using: :btree
+  end
+
+  create_table "teams_players", force: :cascade do |t|
+    t.integer  "team_id"
+    t.integer  "player_id"
+    t.integer  "points",     default: 0
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+    t.index ["player_id"], name: "index_teams_players_on_player_id", using: :btree
+    t.index ["team_id"], name: "index_teams_players_on_team_id", using: :btree
   end
 
   create_table "users", force: :cascade do |t|
