@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
-  devise_for :users, controllers: { registrations: "registrations" }
+  devise_for :users
+  # add line bellow when recaptcha is implemented
+  # , controllers: { registrations: "registrations" }
 
-  root "league#index"
-  
+  root "leagues#index"
+
   resources :leagues, only: [:index, :show] do
     resources :teams, only: [:index, :show] do
       resources :players, only: [:index, :show]
