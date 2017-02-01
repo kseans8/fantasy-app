@@ -1,2 +1,8 @@
 <h1>league</h1>
 <h2 id='leagues'></h2>
+
+<ul>
+  <% @leagues.each do |league| %>
+    <li><%= link_to league.name, league %></li>
+  <% end %>
+</ul>
