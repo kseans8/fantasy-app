@@ -2,6 +2,6 @@
 
 <ul>
   <% @players.each do |player| %>
-    <li> <%= player %> </li>
+    <li> <%= link_to player, player %> </li>
     <% end %>
 </ul>
