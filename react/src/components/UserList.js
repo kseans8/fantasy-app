@@ -1,6 +1,6 @@
 import React, { Component }  from 'react';
 
-class App extends Component {
+class UserList extends Component {
   constructor(props) {
     super(props);
   }
@@ -10,10 +10,10 @@ class App extends Component {
 
     return(
       <div>
-        dope
+        there will be a list containing users here
       </div>
     )
   }
 }
 
-export default App;
+export default UserList;
