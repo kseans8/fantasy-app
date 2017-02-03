@@ -21,7 +21,7 @@ class TeamsController < ApplicationController
     @team.rank = 3
     if @team.save
       flash[:notice] = "You joined the league"
-      redirect_to @league
+      redirect_to @team
     else
       flash[:notice] = @team.errors.full_messages.to_sentence
       render :new
