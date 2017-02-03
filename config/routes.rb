@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   root "leagues#index"
 
   resources :leagues, only: [:index, :show] do
-    resources :teams, only: [:index, :show]
+    resources :teams
   end
 
   resources :users, only: [:index, :show] do

@@ -8,3 +8,7 @@
     <li><%= link_to team.name, team %></li>
   <% end %>
 </ul>
+
+<div class="">
+    <%= link_to "Join this league!", "/leagues/#{@league.id}/teams/new" %>
+</div>
