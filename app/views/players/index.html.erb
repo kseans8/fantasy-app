@@ -3,6 +3,6 @@
 
 <ul>
   <% @players.each do |player| %>
-    <li> <%= player.name %> - Goals: <%= player.goals %> Assists: <%= player.assists %> </li>
+    <li> <%= link_to player.name, player %> - Goals: <%= player.goals %> Assists: <%= player.assists %> </li>
   <% end %>
 </ul>
