@@ -18,4 +18,10 @@ Rails.application.routes.draw do
   end
 
   resources :players, only: [:index, :show]
+
+  namespace :api do
+    namespace :v1 do
+      resources :players
+    end
+  end
 end

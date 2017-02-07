@@ -43,9 +43,11 @@ response = HTTParty.get("https://www.mysportsfeeds.com/api/feed/pull/nhl/#{year}
 response["dailyplayerstats"]["playerstatsentry"].each do |player|
   name = player["player"]["FirstName"] + " " + player["player"]["LastName"]
 
+  position = player["player"]["Position"]
+
   goals = player["stats"]["Goals"]["#text"].to_i
 
   assists =  player["stats"]["Assists"]["#text"].to_i
 
-  Player.create(name: name, goals: goals, assists: assists)
+  Player.create(name: name, position: position, goals: goals, assists: assists)
 end
