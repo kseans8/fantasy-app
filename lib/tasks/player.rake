@@ -1,6 +1,6 @@
 desc "adds players from external API to database that are playing today"
 task players_update: :environment do
-  Player.delete_all
+  DatabaseCleaner.clean_with(:truncation, :only => ['players'])
 
   require 'httparty'
   require 'pry'
