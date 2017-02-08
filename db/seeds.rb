@@ -6,7 +6,7 @@ League.create!(name: 'league3')
 # Player.create!(goals: 1, assists: 0)
 # Player.create!(goals: 0, assists: 0)
 #
-# Team.create!(name: 'team1', rank: 1, score: 2, user_id: 1, league_id: 1)
+Team.create!(name: 'team1', rank: 1, score: 2, user_id: 2, league_id: 1)
 # Team.create!(name: 'team2', rank: 2, score: 1, user_id: 1, league_id: 1)
 # Team.create!(name: 'team3', rank: 3, score: 0, user_id: 1, league_id: 1)
 #

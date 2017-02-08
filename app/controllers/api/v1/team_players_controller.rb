@@ -3,7 +3,7 @@ class Api::V1::TeamPlayersController < ApplicationController
 
   def index
     @teamplayer = TeamPlayer.all
-    render json: { team_id: @teamplayer}
+    render json: { team_player: @teamplayer}
   end
 
   def create
@@ -11,7 +11,6 @@ class Api::V1::TeamPlayersController < ApplicationController
     @teamplayer = TeamPlayer.new(team_id: data["team_id"], player_id: data["player_id"])
     if @teamplayer.save
       flash[:notice] = "You've drafted!"
-      redirect_to :back
     else
       flash[:notice] = @teamplayer.errors.full_messages.to_sentence
     end

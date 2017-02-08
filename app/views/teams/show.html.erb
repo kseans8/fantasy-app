@@ -3,11 +3,13 @@
 <% if !@players.empty? %>
   <ul>
     <% @players.each do |player| %>
-      <li> <%= link_to player, player %> </li>
+      <li> <%= link_to player.name, "/teams/#{@team.id}/players/#{player.id}" %> </li>
     <% end %>
   </ul>
-<% elsif @team.user.id == current_user.id %>
+<% elsif @team.user == current_user %>
   <div id="draft"></div>
+  <div class="team-id" id=<%= @team.id.to_s %>>draft</div>
+  <%= link_to "draft players",  @team %>
 <% else %>
   <h1>User has not drafted a team yet</h1>
 <% end %>

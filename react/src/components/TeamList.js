@@ -20,7 +20,8 @@ class TeamList extends Component {
       defensemen: [],
       defensemenDrafted: false,
       allPlayers: [],
-      team: []
+      team: [],
+      teamId: null
     };
 
     this.handleLeftWingDraft = this.handleLeftWingDraft.bind(this);
@@ -112,7 +113,7 @@ class TeamList extends Component {
       this.state.team.map((player) => {
         let data = {
           player_id: player.id,
-          team_id: 1
+          team_id: this.state.teamId
         }
         let jsonStringData = JSON.stringify(data);
 
@@ -134,9 +135,11 @@ class TeamList extends Component {
         .catch(error => console.error(`Error in fetch: ${error.message}`));
       })
     }
+
   }
 
   componentDidMount() {
+    let newTeamId = parseInt($('.team-id').first().attr("id"));
     fetch('/api/v1/players', {
       credentials: 'same-origin'
     })
@@ -153,7 +156,8 @@ class TeamList extends Component {
     .then(body => {
       let players = body.players;
       this.setState({
-        allPlayers: players
+        allPlayers: players,
+        teamId: newTeamId
       });
     });
   }
