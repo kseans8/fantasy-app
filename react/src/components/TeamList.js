@@ -48,7 +48,6 @@ class TeamList extends Component {
   }
 
   handleRightWingDraft(player, size) {
-    debugger;
     let array = this.state.rightWings;
     if (array.length < size) {
       array.push(player);
@@ -108,6 +107,32 @@ class TeamList extends Component {
           team: teamArray
         });
       });
+    }
+    if (this.state.team.length === 10) {
+      this.state.team.map((player) => {
+        let data = {
+          player_id: player.id,
+          team_id: 1
+        }
+        let jsonStringData = JSON.stringify(data);
+
+        fetch(`/api/v1/team_players`, {
+          credentials: 'same-origin',
+          method: 'post',
+          headers: { 'Content-Type': 'application/json' },
+          body: jsonStringData
+        })
+        .then(response => {
+          if (response.ok) {
+            return response;
+          } else {
+            let errorMessage = `${response.status} (${response.statusText})`,
+            error = new Error(errorMessage);
+            throw(error);
+          }
+        })
+        .catch(error => console.error(`Error in fetch: ${error.message}`));
+      })
     }
   }
 
