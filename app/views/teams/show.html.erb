@@ -1,7 +1,17 @@
 <h1> <%= @team.name %> </h1>
 
-<ul>
-  <% @players.each do |player| %>
-    <li> <%= link_to player, player %> </li>
+<% if !@players.empty? %>
+  <ul>
+    <% @players.each do |player| %>
+      <li> <%= link_to player.name, "/teams/#{@team.id}/players/#{player.id}" %> </li>
     <% end %>
-</ul>
+  </ul>
+<% elsif @team.user == current_user %>
+  <div id="draft"></div>
+  <div class="team-id" id=<%= @team.id.to_s %>>draft</div>
+  <%= link_to "draft players",  @team %>
+<% else %>
+  <h1>User has not drafted a team yet</h1>
+<% end %>
+
+<%= link_to "back to league", @team.league %>

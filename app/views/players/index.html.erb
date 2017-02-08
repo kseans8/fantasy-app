@@ -1,2 +1,8 @@
 <h1>players</h1>
 <h2 id='players'></h2>
+
+<ul>
+  <% @players.each do |player| %>
+    <li> <%= link_to player.name, player %> - Goals: <%= player.goals %> Assists: <%= player.assists %> </li>
+  <% end %>
+</ul>

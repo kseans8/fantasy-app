@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   root "leagues#index"
 
   resources :leagues, only: [:index, :show] do
-    resources :teams, only: [:index, :show]
+    resources :teams
   end
 
   resources :users, only: [:index, :show] do
@@ -17,5 +17,10 @@ Rails.application.routes.draw do
     resources :players, only: [:index, :show]
   end
 
-  resources :players, only: [:index, :show]
+  namespace :api do
+    namespace :v1 do
+      resources :players
+      resources :team_players
+    end
+  end
 end
