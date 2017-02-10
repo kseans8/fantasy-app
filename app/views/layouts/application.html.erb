@@ -1,21 +1,46 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>App Title</title>
-  <%= stylesheet_link_tag    'application', media: 'all' %>
-  <%= javascript_include_tag 'application' %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
 
-  <% if notice %>
-    <p class="alert alert-success"><%= notice %></p>
-  <% end %>
-  <% if alert %>
-    <p class="alert alert-danger"><%= alert %></p>
-  <% end %>
-  
-<%= yield %>
+  <head>
+    <title>Sean's Daily Fanstasy App</title>
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+    <%= csrf_meta_tags %>
+  </head>
 
-</body>
+  <body>
+    <nav class="top-bar small-12 columns" data-topbar role="navigation">
+        <ul class="title-area small-3 columns" >
+          <li class="name">
+            <h1><a href="/">FFH</a></h1>
+          </li>
+        </ul>
+
+        <ul class="right">
+          <% if user_signed_in? %>
+            <li class='right-item nav-link sign-out'> <%= link_to 'View profile', current_user %> </li>
+            <li class='right-item nav-link account-settings'> <%= link_to 'Account Settings', edit_user_registration_path %> </li>
+          <% else %>
+            <li class='right-item sign-up'> <%= link_to 'Sign Up', new_user_registration_path %> </li>
+            <li class='right-item sign-in'> <%= link_to 'Sign In', new_user_session_path %> </li>
+          <% end %>
+        </ul>
+      </nav>
+
+      <div class="top-bar-spacer"></div>
+
+      <div class='error-msgs'>
+        <% flash.each do |name, msg| %>
+          <div class='error-msg'>
+            <% msg = "Invalid Email or Password" if msg == 'Invalid Email or password.' %>
+            <%= content_tag :div, msg, :id => "flash_#{name}" if msg.is_a?(String) %>
+          </div class='error'>
+        <% end %>
+      </div>
+
+      <div class='content'>
+        <%= yield %>
+      </div>
+  </body>
+
 </html>
