@@ -1,2 +1,11 @@
-<h1>teams</h1>
-<h2 id='teams'></h2>
+<div class="teams small-12 columns">
+  <div class="teams-index-title">
+    Today's teams
+  </div>
+
+  <div class="teams-index small-12 row">
+    <% @teams.each do |team| %>
+      <p class="team"><%= link_to team.name, team %></p>
+    <% end %>
+  </div>
+</div>

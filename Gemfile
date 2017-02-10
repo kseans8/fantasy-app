@@ -8,7 +8,9 @@ gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'jquery-rails'
 gem 'simple_form'
+gem 'font-awesome-rails'
 gem 'httparty'
+gem 'foundation-rails'
 gem 'dotenv'
 
 group :development do

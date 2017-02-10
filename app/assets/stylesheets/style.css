@@ -1,0 +1,301 @@
+.top-bar,.title-area, .top-bar *, .top-bar ul {
+  color: #EEEEEE;
+  background: rgba(1, 1, 1, 0);
+}
+
+.top-bar {
+  background: rgba(1, 1, 1, .45);
+  position: fixed;
+}
+
+.top-bar-spacer {
+  height: 85px;
+}
+
+.top-bar:hover {
+  background: rgba(46, 44, 45, .9);
+}
+
+.title-area *:hover {
+  color: #EB6564;
+}
+
+.sign-in *:hover {
+  color: #89BA99;
+}
+
+.sign-out *:hover {
+  color: #EDDB7F;
+}
+
+.account *:hover {
+  color: #EDDB7F;
+}
+
+.account-settings *:hover {
+  color: #89BA99;
+}
+
+body {
+  background-image: url('hockey_net.jpg');
+  background-attachment: fixed;
+  background-attachment: center;
+  background-size: 100% 100%;
+}
+
+a {
+  color: white;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.right {
+  float: right;
+  display: inline-block;
+}
+
+.title-area {
+  display: inline-block;
+  margin-bottom: 0px;
+}
+
+h1 {
+  margin-bottom: 0px;
+  font-family: 'Bevan';
+}
+
+.right-item {
+  display: inline-block;
+  font-size: 28px ;
+  font-family: 'Bevan';
+  margin-right: 30px;
+  margin-top: 10px;
+}
+
+.nav-link {
+  margin-bottom: 0px;
+  margin-top: 15px;
+}
+
+.content {
+  width: 900px;
+  margin: auto;
+}
+
+.content-box {
+  margin-top: 50px;
+  background: rgba(1, 1, 1, .7);
+  padding: 30px 50px 30px 50px;
+}
+
+.content-box input {
+  color: black;
+}
+
+.content * {
+  font-family: 'Bevan';
+  color: white;
+}
+
+.right {
+  margin-bottom: 0px;
+}
+
+.leagues-title {
+  margin-top: 25px;
+  text-align: center;
+  align-self: center;
+  font-size: 140px;
+  background-color: rgba(0,0,0,0.6);
+}
+
+.leagues-index {
+  margin-top: 25px;
+  text-align: center;
+  align-self: center;
+  font-size: 80px;
+  background-color: rgba(0,0,0,0.45);
+}
+
+.league {
+  text-align: center;
+  opacity: ;
+}
+
+.league-title {
+  margin-top: 25px;
+  text-align: center;
+  align-self: center;
+  font-size: 140px;
+  background-color: rgba(0,0,0,0.45);
+}
+
+.teams-index-title {
+  margin-top: 25px;
+  text-align: center;
+  align-self: center;
+  font-size: 100px;
+  background-color: rgba(0,0,0,0.45);
+}
+
+
+.teams-index {
+  margin-top: 25px;
+  text-align: center;
+  align-self: center;
+  font-size: 80px;
+  background-color: rgba(0,0,0,0.45);
+}
+
+.team {
+  text-align: center;
+  opacity: ;
+}
+
+.league-show-links {
+  margin-top: 25px;
+  margin-top: 25px;
+  text-align: center;
+  align-self: center;
+  font-size: 35px;
+  background-color: rgba(0,0,0,0.40);
+}
+
+.team-title {
+  margin-top: 25px;
+  text-align: center;
+  align-self: center;
+  font-size: 120px;
+  background-color: rgba(0,0,0,0.45);
+}
+
+.players-index {
+  margin-top: 25px;
+  text-align: center;
+  align-self: center;
+  font-size: 55px;
+  background-color: rgba(0,0,0,0.45);
+}
+
+.no-players {
+  margin-top: 25px;
+  text-align: center;
+  align-self: center;
+  font-size: 80px;
+  background-color: rgba(0,0,0,0.45);
+}
+
+.new-team-back {
+  margin-top: 15px;
+  font-size: 20px;
+}
+
+.users-index-title {
+  margin-top: 25px;
+  text-align: center;
+  align-self: center;
+  font-size: 100px;
+  background-color: rgba(0,0,0,0.45);
+}
+
+.users-index {
+  margin-top: 25px;
+  text-align: center;
+  align-self: center;
+  font-size: 80px;
+  background-color: rgba(0,0,0,0.45);
+}
+
+.user {
+  text-align: center;
+  opacity: ;
+}
+
+.user-title {
+  margin-top: 25px;
+  text-align: center;
+  align-self: center;
+  font-size: 120px;
+  background-color: rgba(0,0,0,0.45);
+}
+
+.team-title {
+  margin-top: 25px;
+  text-align: center;
+  align-self: center;
+  font-size: 120px;
+  background-color: rgba(0,0,0,0.45);
+}
+
+.user-back {
+  margin-top: 25px;
+  text-align: center;
+  align-self: center;
+  font-size: 25px;
+  background-color: rgba(0,0,0,0.40);
+}
+
+.sign-out {
+  margin-top: 25px;
+  text-align: center;
+  align-self: center;
+  font-size: 25px;
+  background-color: rgba(0,0,0,0.40);
+}
+
+.my-team-react {
+  margin-top: 25px;
+  text-align: center;
+  align-self: center;
+  font-size: 25px;
+  background-color: rgba(0,0,0,0.40);
+}
+
+.left-wings-react {
+  margin-top: 25px;
+  text-align: center;
+  align-self: center;
+  font-size: 25px;
+  background-color: rgba(0,0,0,0.40);
+}
+
+.centers-react {
+  margin-top: 25px;
+  text-align: center;
+  align-self: center;
+  font-size: 25px;
+  background-color: rgba(0,0,0,0.40);
+}
+
+.right-wings-react {
+  margin-top: 25px;
+  text-align: center;
+  align-self: center;
+  font-size: 25px;
+  background-color: rgba(0,0,0,0.40);
+}
+.defensemen-react {
+  margin-top: 25px;
+  text-align: center;
+  align-self: center;
+  font-size: 25px;
+  background-color: rgba(0,0,0,0.40);
+}
+
+.submit-draft {
+  margin-top: 25px;
+  text-align: center;
+  align-self: center;
+  font-size: 25px;
+  background-color: rgba(0,0,0,0.40);
+}
+
+.team-back {
+  margin-top: 25px;
+  text-align: center;
+  align-self: center;
+  font-size: 25px;
+  background-color: rgba(0,0,0,0.40);
+}

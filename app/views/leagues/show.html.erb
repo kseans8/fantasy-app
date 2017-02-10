@@ -1,16 +1,17 @@
-<h1>teams from leagues show page</h1>
-<h2 id='teams'></h2>
+<div class="league-show small-12 columns">
+  <div class="league-title small-9 row">
+    <%= @league.name %>
+  </div>
 
-<h3><%= @league.name %></h3>
+  <div class="teams-index small-12 row">
+    <% @teams.each do |team| %>
+      <p class="team"><%= link_to team.name, team %></p>
+    <% end %>
+  </div>
 
-<ul>
-  <% @teams.each do |team| %>
-    <li><%= link_to team.name, team %></li>
-  <% end %>
-</ul>
-
-<div class="">
-    <%= link_to "Join this league!", "/leagues/#{@league.id}/teams/new" %>
-  </br>
-    <%= link_to "Back to leagues", "/leagues" %>
+  <div class="league-show-links small-4 row">
+      <%= link_to "Join this league!", "/leagues/#{@league.id}/teams/new" %>
+    </br>
+      <%= link_to "Back to leagues", "/leagues" %>
+  </div>
 </div>

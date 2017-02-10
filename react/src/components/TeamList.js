@@ -166,29 +166,39 @@ class TeamList extends Component {
 
     return(
       <div>
-        < MyTeam
-          team={ this.state.team }
-        />
-        < LeftWingsList
-          allPlayers={ this.state.allPlayers }
-          leftWings={ this.state.leftWings }
-          handleLeftWingDraft={this.handleLeftWingDraft}
-        />
-        < CentersList
-          allPlayers={ this.state.allPlayers }
-          centers={ this.state.centers }
-          handleCenterDraft={this.handleCenterDraft}
-        />
-        < RightWingsList
-          allPlayers={ this.state.allPlayers }
-          rightWings={ this.state.rightWings }
-          handleRightWingDraft={this.handleRightWingDraft}
-        />
-        < DefensemenList
-          allPlayers={ this.state.allPlayers }
-          defensemen={ this.state.defensemen }
-          handleDefenseDraft={this.handleDefenseDraft}
-        />
+        <div className="my-team-react">
+          < MyTeam
+            team={ this.state.team }
+          />
+        </div>
+        <div className="left-wings-react">
+          < LeftWingsList
+            allPlayers={ this.state.allPlayers }
+            leftWings={ this.state.leftWings }
+            handleLeftWingDraft={this.handleLeftWingDraft}
+          />
+        </div>
+        <div className="centers-react">
+          < CentersList
+            allPlayers={ this.state.allPlayers }
+            centers={ this.state.centers }
+            handleCenterDraft={this.handleCenterDraft}
+          />
+        </div>
+        <div className="right-wings-react">
+          < RightWingsList
+            allPlayers={ this.state.allPlayers }
+            rightWings={ this.state.rightWings }
+            handleRightWingDraft={this.handleRightWingDraft}
+          />
+        </div>
+        <div className="defensemen-react">
+          < DefensemenList
+            allPlayers={ this.state.allPlayers }
+            defensemen={ this.state.defensemen }
+            handleDefenseDraft={this.handleDefenseDraft}
+          />
+        </div>
       </div>
     )
   }
