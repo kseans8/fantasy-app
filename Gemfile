@@ -25,14 +25,17 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.5'
   gem 'shoulda'
   gem 'valid_attribute'
+  gem 'database_cleaner'
 end
 
 group :test do
   gem 'coveralls', require: false
+  gem 'database_cleaner'
 end
 
 group :production do
   gem 'rails_12factor'
+  gem 'database_cleaner'
 end
 
 
