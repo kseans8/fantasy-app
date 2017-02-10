@@ -230,7 +230,7 @@ h1 {
 }
 
 .user-back {
-  margin-top: 255px;
+  margin-top: 25px;
   text-align: center;
   align-self: center;
   font-size: 25px;
@@ -238,6 +238,61 @@ h1 {
 }
 
 .sign-out {
+  margin-top: 25px;
+  text-align: center;
+  align-self: center;
+  font-size: 25px;
+  background-color: rgba(0,0,0,0.40);
+}
+
+.my-team-react {
+  margin-top: 25px;
+  text-align: center;
+  align-self: center;
+  font-size: 25px;
+  background-color: rgba(0,0,0,0.40);
+}
+
+.left-wings-react {
+  margin-top: 25px;
+  text-align: center;
+  align-self: center;
+  font-size: 25px;
+  background-color: rgba(0,0,0,0.40);
+}
+
+.centers-react {
+  margin-top: 25px;
+  text-align: center;
+  align-self: center;
+  font-size: 25px;
+  background-color: rgba(0,0,0,0.40);
+}
+
+.right-wings-react {
+  margin-top: 25px;
+  text-align: center;
+  align-self: center;
+  font-size: 25px;
+  background-color: rgba(0,0,0,0.40);
+}
+.defensemen-react {
+  margin-top: 25px;
+  text-align: center;
+  align-self: center;
+  font-size: 25px;
+  background-color: rgba(0,0,0,0.40);
+}
+
+.submit-draft {
+  margin-top: 25px;
+  text-align: center;
+  align-self: center;
+  font-size: 25px;
+  background-color: rgba(0,0,0,0.40);
+}
+
+.team-back {
   margin-top: 25px;
   text-align: center;
   align-self: center;
