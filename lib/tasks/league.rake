@@ -6,8 +6,8 @@ task league_management: :environment do
     league.determine_rankings
   end
 
-  # DatabaseCleaner.clean_with(:truncation, :only => ['leagues'])
-  # League.create!(name: "Experts")
-  # League.create!(name: "Enthusiasts")
-  # League.create!(name: "Beginners")
+  DatabaseCleaner.clean_with(:truncation, :only => ['leagues'])
+  League.create!(name: "Experts")
+  League.create!(name: "Enthusiasts")
+  League.create!(name: "Beginners")
 end
