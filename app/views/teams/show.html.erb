@@ -1,17 +1,33 @@
-<h1> <%= @team.name %> </h1>
+<div class="team-show small-12 columns">
+  <div class="team-title small-10 row">
+    <%= @team.name %>
+  </div>
 
-<% if !@players.empty? %>
-  <ul>
-    <% @players.each do |player| %>
-      <li> <%= link_to player.name, "/teams/#{@team.id}/players/#{player.id}" %> </li>
-    <% end %>
-  </ul>
-<% elsif @team.user == current_user %>
-  <div id="draft"></div>
-  <div class="team-id" id=<%= @team.id.to_s %>>draft</div>
-  <%= link_to "draft players",  @team %>
-<% else %>
-  <h1>User has not drafted a team yet</h1>
-<% end %>
+  <% if !@players.empty? %>
 
-<%= link_to "back to league", @team.league %>
+    <div class="players-index small-10 row">
+      <% @players.each do |player| %>
+        <p class="player"> <%= link_to player.name, "/teams/#{@team.id}/players/#{player.id}" %> </p>
+      <% end %>
+    </div>
+
+  <% elsif @team.user == current_user %>
+
+    <div id="draft"></div>
+    <div class="team-id" id=<%= @team.id.to_s %>>draft</div>
+    <%= link_to "draft players",  @team %>
+
+
+  <% else %>
+
+    <div class="no-players small-12 row">
+      <%= "#{@team.user.username} hasnt drafted yet" %>
+    </div>
+
+  <% end %>
+
+
+  <%= link_to "back to league", @team.league %>
+
+
+</div>

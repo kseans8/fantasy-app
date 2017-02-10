@@ -1,7 +1,15 @@
-<div class="">
-  <%= @user.username %>
-</div>
+<div class="user-show small-12 columns">
+  <div class="user-title small-12 row">
+    <%= "#{@user.username}'s Profile" %>
+  </div>
 
-<div class="">
-  <%= link_to 'Sign Out', destroy_user_session_path, :method => :delete %>
+  <div class="user-back small-3 row">
+    <%= link_to 'Back', '/users' %>
+  </div>
+
+  <% if current_user == @user %>
+    <div class="sign-out small-3 row ">
+      <%= link_to 'Sign Out', destroy_user_session_path, :method => :delete %>
+    </div>
+  <% end %>
 </div>
