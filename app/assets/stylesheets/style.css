@@ -37,13 +37,14 @@
 }
 
 body {
-  /*background-color: #05A0A8;*/
-  background-image: url(/assets/hockey_net.jpg);
+  background-image: url('hockey_net.jpg');
   background-attachment: fixed;
+  background-attachment: center;
+  background-size: 100% 100%;
 }
 
 a {
-  color: black;
+  color: white;
 }
 
 ul {
@@ -96,8 +97,28 @@ h1 {
 
 .content * {
   font-family: 'Bevan';
+  color: white;
 }
 
 .right {
   margin-bottom: 0px;
+}
+
+.leagues-title {
+  text-align: center;
+  align-self: center;
+  font-size: 50px;
+  background-color: rgba(0,0,0,0.45);
+}
+
+.leagues-index {
+  margin-top: 25px;
+  text-align: center;
+  align-self: center;
+  font-size: 40px;
+  background-color: rgba(0,0,0,0.45);
+}
+.league {
+  text-align: center;
+  opacity: ;
 }

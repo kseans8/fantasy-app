@@ -1,8 +1,11 @@
-<h1>league</h1>
-<h2 id='leagues'></h2>
+<div class="leagues small-12 columns">
+  <div class="leagues-title">
+    Select a league to join from the list below:
+  </div>
 
-<ul>
-  <% @leagues.each do |league| %>
-    <li><%= link_to league.name, league %></li>
-  <% end %>
-</ul>
+  <div class="leagues-index small-3 row">
+    <% @leagues.each do |league| %>
+      <p class="league"><%= link_to league.name, league %></p>
+    <% end %>
+  </div>
+</div>
