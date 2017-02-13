@@ -21,6 +21,7 @@ end
 
 group :development, :test do
   gem 'capybara'
+  gem 'warden-rspec-rails'
   gem 'factory_girl_rails'
   gem 'launchy', require: false
   gem 'pry-rails'
@@ -33,6 +34,7 @@ end
 group :test do
   gem 'coveralls', require: false
   gem 'database_cleaner'
+  gem 'shoulda-matchers'
 end
 
 group :production do
