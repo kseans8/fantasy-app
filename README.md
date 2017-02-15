@@ -3,7 +3,7 @@
 ![Code Climate](https://codeclimate.com/github/kseans8/fantasy-app.png)
 
 
-# SchwamIt
+# Sean's Fantasy Hockey App
 
 currently having trouble with background jobs being called by Heroku scheduler and background image loading on Heroku
 
