@@ -1,5 +1,5 @@
 {
-  "name": "rails_react_boilerplate",
+  "name": "fantasy-app",
   "version": "1.0.0",
   "description": "",
   "main": "webpack.config.js",
@@ -9,8 +9,11 @@
     "test": "node_modules/.bin/karma start react/karma.conf.js",
     "webpack": "node_modules/.bin/webpack --config ./react/webpack.config.js"
   },
-  "author": "",
+  "author": "Sean",
   "license": "ISC",
+  "engines": {
+    "node": "7.2.0"
+  },
   "devDependencies": {
     "enzyme": "2.3.0",
     "jasmine-core": "2.4.1",
