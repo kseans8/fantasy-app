@@ -3,7 +3,6 @@ task players_update: :environment do
   DatabaseCleaner.clean_with(:truncation, :only => ['players'])
 
   require 'httparty'
-  require 'pry'
 
   auth = {:username => "kseans8", :password => "kseans8"}
 
