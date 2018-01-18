@@ -9,7 +9,7 @@ currently having trouble with background jobs being called by Heroku scheduler a
 
 ## Overview
 
-[This Fantasy Hockey App](https://seans-daily-fantasy-app.herokuapp.com/) is a day-by-day fantasy app where users can select 10 players (two for every offensive position and four defensemen) and see who has drafted the best combination of players
+[This Fantasy Hockey App](seans-daily-fantasy-app.herokuapp.com) is a day-by-day fantasy app where users can select 10 players (two for every offensive position and four defensemen) and see who has drafted the best combination of players
 
 ##Core Technologies
 
